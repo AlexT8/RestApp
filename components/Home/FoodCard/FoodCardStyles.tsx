@@ -5,8 +5,8 @@ import { FoodCardStylesProps } from "../../../types/Home/FoodCardTypes"
 export const FoodCardStyles = styled.TouchableOpacity<FoodCardStylesProps>`
     background: ${(props) =>
         props.selected ? constants.colors.primary : "#FFFF"};
-    height: 180;
-    width: 120;
+    height: 180px;
+    width: 120px;
     border-radius: 20px;
     margin: 10px;
     elevation: 4;
@@ -19,8 +19,8 @@ export const FoodCardStyles = styled.TouchableOpacity<FoodCardStylesProps>`
 `
 
 export const FoodCardButton = styled.View<FoodCardStylesProps>`
-    height: 26;
-    width: 26;
+    height: 26px;
+    width: 26px;
     border-radius: 100%;
     background: ${(props) =>
         props.selected ? constants.colors.background : constants.colors.secondary};
