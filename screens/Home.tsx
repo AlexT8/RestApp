@@ -7,11 +7,9 @@ import SearchInput from "../components/Home/SearchInput"
 import SearchContainer from "../components/Home/SearchContainer"
 import SvgUri from "react-native-svg-uri"
 import CategorieCard from "../components/Home/CategorieCard/CategorieCard"
-import { Dimensions, Image, ScrollView, View } from "react-native"
+import { ScrollView, View } from "react-native"
 import { CategorieCardType } from '../types/Home/CategorieCardTypes'
 import { foodInfo, updateSelected } from '../controllers/foodCtrl'
-import FoodCard, { AddButton, BottomContainer, InfoContainer, SideContainer, StarContainer, TitleContainer } from '../components/Home/FoodCard/FoodCard'
-import { constants } from '../utils/constants'
 import FoodCardComponent from '../components/Home/FoodCard/FoodCardComponent'
 
 const HomeScreen = () => {
