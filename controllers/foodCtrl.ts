@@ -1,6 +1,6 @@
-import { FoodCardType } from "../types/Home/CategorieCardTypes";
+import { CategorieCardType } from "../types/Home/CategorieCardTypes";
 
-export const foodInfo: FoodCardType[] = [
+export const foodInfo: CategorieCardType[] = [
     {id: 1, image: require('../assets/images/pizza.png'), title: 'Pizza', selected: false},
     {id: 2, image: require('../assets/images/seafood.png'), title: 'Seafood', selected: false},
     {id: 3, image: require('../assets/images/drink.png'), title: 'SoftDrinks', selected: false},
@@ -9,7 +9,7 @@ export const foodInfo: FoodCardType[] = [
     {id: 6, image: require('../assets/images/drink.png'), title: 'SoftDrinks', selected: false},
 ]
 
-export const updateSelected = (selectedCard: FoodCardType, cards: FoodCardType[], setCards: (arg: FoodCardType[]) => void) => {
+export const updateSelected = (selectedCard: CategorieCardType, cards: CategorieCardType[], setCards: (arg: CategorieCardType[]) => void) => {
     const _cards = [...cards]
     let index = 0
 
