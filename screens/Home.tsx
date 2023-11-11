@@ -52,7 +52,7 @@ const HomeScreen = () => {
                     contentContainerStyle={{paddingEnd: 20}}>
                         {
                             cards.map((card: CategorieCardType)=>
-                                <CategorieCard card={card} onPress={updateCardSelected}/>
+                                <CategorieCard card={card} onPress={updateCardSelected} key={card.id}/>
                             )
                         }
                     </ScrollView>
