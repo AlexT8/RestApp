@@ -1,5 +1,5 @@
 import { FoodCardComponentProps } from '../../../types/Home/FoodCardTypes';
-import { Image, Text } from "react-native";
+import { Image } from "react-native";
 import StyledText from "../../general/StyledText";
 import SvgUri from "react-native-svg-uri";
 import { FoodCardButton, FoodCardStyles } from './FoodCardStyles';

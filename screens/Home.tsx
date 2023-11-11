@@ -9,33 +9,14 @@ import SvgUri from "react-native-svg-uri"
 import FoodCard from "../components/Home/FoodCard/FoodCard"
 import { Dimensions, ScrollView, View } from "react-native"
 import { FoodCardType } from '../types/Home/FoodCardTypes'
+import { foodInfo, updateSelected } from '../controllers/foodCtrl'
 
 const HomeScreen = () => {
 
-    const screenWidth = Dimensions.get('screen').width;
+    const [cards, setCards] = React.useState<FoodCardType[]>(foodInfo)
 
-    const [cards, setCards] = React.useState<FoodCardType[]>([
-        {id: 1, image: require('../assets/images/pizza.png'), title: 'Pizza', selected: false},
-        {id: 2, image: require('../assets/images/seafood.png'), title: 'Seafood', selected: false},
-        {id: 3, image: require('../assets/images/drink.png'), title: 'SoftDrinks', selected: false},
-        {id: 4, image: require('../assets/images/pizza.png'), title: 'Pizza', selected: false},
-        {id: 5, image: require('../assets/images/seafood.png'), title: 'Seafood', selected: false},
-        {id: 6, image: require('../assets/images/drink.png'), title: 'SoftDrinks', selected: false},
-    ])
-
-    const updateSelected = (selectedCard: FoodCardType) => {
-        const _cards = [...cards]
-        let index = 0
-
-        _cards.forEach((card, i) => {
-            card.selected = false
-            if(card.id === selectedCard.id) index = i
-        })
-
-        selectedCard.selected = !selectedCard.selected
-        _cards.splice(index, 1, selectedCard)
-
-        setCards(_cards)
+    const updateCardSelected = (card: FoodCardType) => {
+        updateSelected(card, cards, setCards)
     }
 
     return(
@@ -58,7 +39,7 @@ const HomeScreen = () => {
                 <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
                     {
                         cards.map((card: FoodCardType)=>
-                            <FoodCard card={card} onPress={updateSelected}/>
+                            <FoodCard card={card} onPress={updateCardSelected}/>
                         )
                     }
                 </ScrollView>
