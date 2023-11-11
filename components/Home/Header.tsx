@@ -13,7 +13,7 @@ export const HomeHeader = () => {
     return(
         <Header>
             <TouchableOpacity>
-                <Image source={require('../../assets/images/profile.png')} style={{height: 40, width: 40}}/>
+                <Image source={require('../../assets/images/profile.png')} style={{height: 40, width: 40, borderRadius: 100}}/>
             </TouchableOpacity>
 
             <TouchableOpacity>
