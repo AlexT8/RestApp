@@ -26,7 +26,7 @@ const HomeScreen = () => {
                 <HomeHeader/>
             </PaddingContainer>
 
-            <ScrollView showsVerticalScrollIndicator={false}>
+            <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{paddingBottom: 40}}>
                 <PaddingContainer>
                     <TitlesSection>
                         <StyledText style={{fontSize: 16, fontWeight: '400'}}>Food</StyledText>
@@ -42,7 +42,8 @@ const HomeScreen = () => {
                 </PaddingContainer>
 
                 <View>
-                    <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+                    <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{paddingLeft: 10}}
+                    contentContainerStyle={{paddingEnd: 20}}>
                         {
                             cards.map((card: CategorieCardType)=>
                                 <CategorieCard card={card} onPress={updateCardSelected}/>
