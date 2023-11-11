@@ -6,7 +6,7 @@ import TitlesSection from "../components/Home/TitlesSection"
 import SearchInput from "../components/Home/SearchInput"
 import SearchContainer from "../components/Home/SearchContainer"
 import SvgUri from "react-native-svg-uri"
-import FoodCard from "../components/Home/FoodCard"
+import FoodCard from "../components/Home/FoodCard/FoodCard"
 import { Dimensions, ScrollView } from "react-native"
 import { FoodCardType } from '../types/Home/FoodCardTypes'
 
