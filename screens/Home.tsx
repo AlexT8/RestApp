@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { PaddingContainer, ScreenContainer } from "../styles/general/ScreenContainer"
 import { HomeHeader } from "../components/Home/Header"
 import StyledText from "../components/general/StyledText"
@@ -6,25 +6,23 @@ import TitlesSection from "../components/Home/TitlesSection"
 import SearchInput from "../components/Home/SearchInput"
 import SearchContainer from "../components/Home/SearchContainer"
 import SvgUri from "react-native-svg-uri"
-import CategorieCard from "../components/Home/CategorieCard/CategorieCard"
+import CategoryCard from "../components/Home/CategoryCard/CategoryCard"
 import { ScrollView, View } from "react-native"
-import { CategorieCardType } from '../types/Home/CategorieCardTypes'
-import { foodInfo, updateSelected } from '../controllers/foodCtrl'
+import { cards } from '../controllers/foodCtrl'
 import FoodCardComponent from '../components/Home/FoodCard/FoodCardComponent'
 
+const pizzas = [
+    {id: 1, image: require('../assets/images/pizza_image.png')},
+    {id: 2, image: require('../assets/images/pizza_image2.png')},
+    {id: 3, image: require('../assets/images/pizza_image3.png')},
+]
+
 const HomeScreen = () => {
+    const [selectedCardIndex, setSelectedCardIndex] = useState<number>()
 
-    const [cards, setCards] = React.useState<CategorieCardType[]>(foodInfo)
-
-    const updateCardSelected = (card: CategorieCardType) => {
-        updateSelected(card, cards, setCards)
+    const updateSelectedCard = (newIndex: number) => {
+        setSelectedCardIndex(oldIndex => oldIndex !== newIndex ? newIndex : undefined)
     }
-
-    const pizzas = [
-        {id: 1, image: require('../assets/images/pizza_image.png')},
-        {id: 2, image: require('../assets/images/pizza_image2.png')},
-        {id: 3, image: require('../assets/images/pizza_image3.png')},
-    ]
 
     return(
         <ScreenContainer>
@@ -51,8 +49,8 @@ const HomeScreen = () => {
                     <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{paddingLeft: 10}}
                     contentContainerStyle={{paddingEnd: 20}}>
                         {
-                            cards.map((card: CategorieCardType)=>
-                                <CategorieCard card={card} onPress={updateCardSelected} key={card.id}/>
+                            cards.map((card, index)=>
+                                <CategoryCard card={{...card, selected: selectedCardIndex === index}} onPress={() => updateSelectedCard(index)} key={card.id}/>
                             )
                         }
                     </ScrollView>

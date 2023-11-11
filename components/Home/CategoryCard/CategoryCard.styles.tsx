@@ -1,8 +1,7 @@
 import styled from "styled-components/native"
 import { constants } from "../../../utils/constants"
-import { CategorieCardStylesProps } from "../../../types/Home/CategorieCardTypes"
 
-export const CategorieCardStyles = styled.TouchableOpacity<CategorieCardStylesProps>`
+export const CategoryCardContainer = styled.TouchableOpacity<{selected: boolean}>`
     background: ${(props) =>
         props.selected ? constants.colors.primary : "#FFFF"};
     height: 180px;
@@ -18,7 +17,7 @@ export const CategorieCardStyles = styled.TouchableOpacity<CategorieCardStylesPr
     justify-content: space-evenly;
 `
 
-export const CategorieCardButton = styled.View<CategorieCardStylesProps>`
+export const CategoryCardButton = styled.View<{selected: boolean}>`
     height: 26px;
     width: 26px;
     border-radius: 100%;
