@@ -1,12 +1,9 @@
 import styled from "styled-components/native";
 import { constants } from "../../utils/constants";
-import { TouchableOpacityProps } from "react-native";
+import { FoodCardComponentProps, FoodCardType } from '../../types/Home/FoodCardTypes';
+import { FoodCardStylesProps } from "../../types/Home/FoodCardTypes";
 
-interface FoodCardProps extends TouchableOpacityProps {
-    selected?: boolean;
-}
-
-const FoodCard = styled.TouchableOpacity<FoodCardProps>`
+const FoodCardStyles = styled.TouchableOpacity<FoodCardStylesProps>`
     background: ${(props) =>
         props.selected ? constants.colors.primary : "#FFFF"};
     height: 180;
@@ -19,5 +16,15 @@ const FoodCard = styled.TouchableOpacity<FoodCardProps>`
     shadow-opacity: 0.3;
     shadow-radius: 4px;
 `
+
+const FoodCard = (props: FoodCardComponentProps) => {
+
+    const { card, onPress } = props
+
+    return(
+        <FoodCardStyles onPress={()=>onPress(card)} selected={card.selected}>
+        </FoodCardStyles>
+    )
+}
 
 export default FoodCard

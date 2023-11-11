@@ -8,12 +8,13 @@ import SearchContainer from "../components/Home/SearchContainer"
 import SvgUri from "react-native-svg-uri"
 import FoodCard from "../components/Home/FoodCard"
 import { Dimensions, ScrollView } from "react-native"
+import { FoodCardType } from '../types/Home/FoodCardTypes'
 
 const HomeScreen = () => {
 
     const screenWidth = Dimensions.get('screen').width;
 
-    const [cards, setCards] = React.useState([
+    const [cards, setCards] = React.useState<FoodCardType[]>([
         {id: 1, image: '../assets/images/pizza.svg', title: 'Pizza', selected: false},
         {id: 2, image: '../assets/images/pizza.svg', title: 'Seafood', selected: false},
         {id: 3, image: '../assets/images/pizza.svg', title: 'SoftDrinks', selected: false},
@@ -22,7 +23,7 @@ const HomeScreen = () => {
         {id: 6, image: '../assets/images/pizza.svg', title: 'SoftDrinks', selected: false},
     ])
 
-    const updateSelected = (selectedCard: any) => {
+    const updateSelected = (selectedCard: FoodCardType) => {
         const _cards = [...cards]
         let index = 0
 
@@ -55,8 +56,8 @@ const HomeScreen = () => {
 
             <ScrollView horizontal={true} style={{width: screenWidth, marginLeft: -18, paddingHorizontal: 10}}>
                 {
-                    cards.map((card)=>
-                        <FoodCard onPress={()=>updateSelected(card)} selected={card.selected}/>
+                    cards.map((card: FoodCardType)=>
+                        <FoodCard card={card} onPress={updateSelected}/>
                     )
                 }
             </ScrollView>
