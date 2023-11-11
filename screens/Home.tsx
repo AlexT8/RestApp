@@ -7,7 +7,7 @@ import SearchInput from "../components/Home/SearchInput"
 import SearchContainer from "../components/Home/SearchContainer"
 import SvgUri from "react-native-svg-uri"
 import CategorieCard from "../components/Home/CategorieCard/CategorieCard"
-import { Dimensions, ScrollView, View } from "react-native"
+import { Dimensions, Image, ScrollView, View } from "react-native"
 import { CategorieCardType } from '../types/Home/CategorieCardTypes'
 import { foodInfo, updateSelected } from '../controllers/foodCtrl'
 import FoodCard, { AddButton, BottomContainer, InfoContainer, SideContainer, StarContainer } from '../components/Home/FoodCard/FoodCard'
@@ -54,7 +54,7 @@ const HomeScreen = () => {
                     <InfoContainer>
                         <StyledText style={{fontSize: 14, fontWeight: "600"}}>Top of the week</StyledText>
                         <StyledText style={{fontSize: 16, fontWeight: "600", marginTop: 16}}>Primavera pizza</StyledText>
-                        <StyledText style={{fontSize: 14, fontWeight: "500", color: constants.colors.gray}}>Weight 540gr</StyledText>
+                        <StyledText style={{fontSize: 14, fontWeight: "500", color: constants.colors.gray, marginBottom: 10}}>Weight 540gr</StyledText>
 
                     </InfoContainer>
 
@@ -70,6 +70,8 @@ const HomeScreen = () => {
                     </BottomContainer>
                 </SideContainer>
 
+                <Image source={require('../assets/images/pizza_image.png')} style={{overflow: 'hidden'}}/>
+                
             </FoodCard>
         </ScreenContainer>
     )

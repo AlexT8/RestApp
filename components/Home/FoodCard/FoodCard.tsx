@@ -9,6 +9,8 @@ const FoodCard = styled.View`
     margin-top: 12px;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
 `
 export const SideContainer = styled.View`
     justify-content: space-between;
