@@ -3,6 +3,7 @@ import FoodCard, { AddButton, BottomContainer, InfoContainer, SideContainer, Sta
 import StyledText from "../../general/StyledText"
 import { Image } from "react-native"
 import InfoContainerComponent from "./InfoContainer"
+import BottomContainerComponent from "./bottomContainerComponent"
 
 const FoodCardComponent = () => {
     return(
@@ -10,16 +11,7 @@ const FoodCardComponent = () => {
             <SideContainer>
                 <InfoContainerComponent />
 
-                <BottomContainer>
-                    <AddButton>
-                        <SvgUri source={require('../../assets/images/add_icon.svg')}/>
-                    </AddButton>
-
-                    <StarContainer>
-                        <SvgUri source={require('../../assets/images/star_icon.svg')}/>
-                        <StyledText style={{fontSize: 12, fontWeight: "600"}}>5.0</StyledText>
-                    </StarContainer>
-                </BottomContainer>
+                <BottomContainerComponent />
             </SideContainer>
 
             <Image source={require('../../assets/images/pizza_image.png')} style={{overflow: 'hidden'}}/>
