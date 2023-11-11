@@ -8,7 +8,7 @@ interface FoodCardProps extends TouchableOpacityProps {
 
 const FoodCard = styled.TouchableOpacity<FoodCardProps>`
     background: ${(props) =>
-        props.selected ? constants.colors.secondary : "#FFFF"};
+        props.selected ? constants.colors.primary : "#FFFF"};
     height: 180;
     width: 120;
     border-radius: 20px;
