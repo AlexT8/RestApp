@@ -20,6 +20,8 @@ const HomeScreen = () => {
                 <SvgUri source={require('../assets/images/search_icon.svg')} width="20" height="20"/>
                 <SearchInput placeholder="Search..."/>
             </SearchContainer>
+
+            <StyledText style={{fontSize: 16, fontWeight: "700"}}>Categories</StyledText>
         </ScreenContainer>
     )
 }
