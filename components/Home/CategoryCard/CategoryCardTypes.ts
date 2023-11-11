@@ -1,13 +1,12 @@
-import { ImageSourcePropType } from "react-native";
+import { ImageSourcePropType } from 'react-native'
 
 export interface CategoryCardType {
-    id: number,
-    image: ImageSourcePropType,
-    title: string,
+  id: number
+  image: ImageSourcePropType
+  title: string
 }
 
 export interface CategoryCardComponentProps {
-    onPress: () => void;
-    card: CategoryCardType & {selected: boolean};
-};
-  
+  onPress: () => void
+  card: CategoryCardType & { selected: boolean }
+}
