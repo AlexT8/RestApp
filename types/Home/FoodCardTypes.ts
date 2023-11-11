@@ -1,8 +1,8 @@
-import { TouchableOpacityProps } from "react-native";
+import { ImageSourcePropType, TouchableOpacityProps } from "react-native";
 
 export interface FoodCardType {
     id: number,
-    image: string,
+    image: ImageSourcePropType,
     title: string,
     selected: boolean
 }
