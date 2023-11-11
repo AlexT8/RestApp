@@ -22,33 +22,39 @@ const HomeScreen = () => {
 
     return(
         <ScreenContainer>
-            <HomeHeader />
+            <HomeHeader/>
+            <ScrollView showsVerticalScrollIndicator={false}>
 
-            <TitlesSection>
-                <StyledText style={{fontSize: 16, fontWeight: '400'}}>Food</StyledText>
-                <StyledText style={{fontSize: 32, fontWeight: "700"}}>Delivery</StyledText>
-            </TitlesSection>
+                <TitlesSection>
+                    <StyledText style={{fontSize: 16, fontWeight: '400'}}>Food</StyledText>
+                    <StyledText style={{fontSize: 32, fontWeight: "700"}}>Delivery</StyledText>
+                </TitlesSection>
 
-            <SearchContainer>
-                <SvgUri source={require('../assets/images/search_icon.svg')} width="20" height="20"/>
-                <SearchInput placeholder="Search..."/>
-            </SearchContainer>
+                <SearchContainer>
+                    <SvgUri source={require('../assets/images/search_icon.svg')} width="20" height="20"/>
+                    <SearchInput placeholder="Search..."/>
+                </SearchContainer>
 
-            <StyledText style={{fontSize: 16, fontWeight: "700"}}>Categories</StyledText>
+                <StyledText style={{fontSize: 16, fontWeight: "700"}}>Categories</StyledText>
 
-            <View>
-                <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-                    {
-                        cards.map((card: CategorieCardType)=>
-                            <CategorieCard card={card} onPress={updateCardSelected}/>
-                        )
-                    }
-                </ScrollView>
-            </View>
+                <View>
+                    <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+                        {
+                            cards.map((card: CategorieCardType)=>
+                                <CategorieCard card={card} onPress={updateCardSelected}/>
+                            )
+                        }
+                    </ScrollView>
+                </View>
 
-            <StyledText style={{fontSize: 16, fontWeight: "700", marginTop: 16}}>Popular</StyledText>
+                <StyledText style={{fontSize: 16, fontWeight: "700", marginTop: 16}}>Popular</StyledText>
+                
+                <FoodCardComponent />
+                <FoodCardComponent />
+                <FoodCardComponent />
+                <FoodCardComponent />
 
-            <FoodCardComponent />
+            </ScrollView>
         </ScreenContainer>
     )
 }
