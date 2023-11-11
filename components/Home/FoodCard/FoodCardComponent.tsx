@@ -1,9 +1,9 @@
 import FoodCard, { SideContainer } from "./FoodCardStyles"
-import { Image } from "react-native"
+import { Image, ImageRequireSource } from "react-native"
 import InfoContainerComponent from "./InfoContainer"
 import BottomContainerComponent from "./BottomContainerComponent"
 
-const FoodCardComponent = () => {
+const FoodCardComponent = ({image}: {image: ImageRequireSource}) => {
     return(
         <FoodCard>
             <SideContainer>
@@ -12,7 +12,7 @@ const FoodCardComponent = () => {
                 <BottomContainerComponent />
             </SideContainer>
 
-            <Image source={require('../../../assets/images/pizza_image.png')} style={{overflow: 'hidden'}}/>
+            <Image source={image} style={{overflow: 'hidden'}}/>
             
         </FoodCard>
     )

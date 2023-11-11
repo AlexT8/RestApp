@@ -20,6 +20,12 @@ const HomeScreen = () => {
         updateSelected(card, cards, setCards)
     }
 
+    const pizzas = [
+        {id: 1, image: require('../assets/images/pizza_image.png')},
+        {id: 2, image: require('../assets/images/pizza_image2.png')},
+        {id: 3, image: require('../assets/images/pizza_image3.png')},
+    ]
+
     return(
         <ScreenContainer>
             <PaddingContainer>
@@ -55,10 +61,11 @@ const HomeScreen = () => {
                 <PaddingContainer>
                     <StyledText style={{fontSize: 16, fontWeight: "700", marginTop: 16}}>Popular</StyledText>
                     
-                    <FoodCardComponent />
-                    <FoodCardComponent />
-                    <FoodCardComponent />
-                    <FoodCardComponent />
+                    {
+                        pizzas.map(pizza => 
+                            <FoodCardComponent key={pizza.id} image={pizza.image}/>
+                        )
+                    }
                 </PaddingContainer>
 
             </ScrollView>
