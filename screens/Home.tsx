@@ -10,6 +10,8 @@ import CategoryCard from "../components/Home/CategoryCard/CategoryCard"
 import { ScrollView, View } from "react-native"
 import { cards } from '../controllers/foodCtrl'
 import FoodCardComponent from '../components/Home/FoodCard/FoodCardComponent'
+import { useFonts, Montserrat_400Regular, Montserrat_500Medium, Montserrat_600SemiBold, Montserrat_700Bold } from '@expo-google-fonts/montserrat';
+
 
 const pizzas = [
     {id: 1, image: require('../assets/images/pizza_image.png')},
@@ -18,6 +20,14 @@ const pizzas = [
 ]
 
 const HomeScreen = () => {
+
+    useFonts({
+        M400: Montserrat_400Regular,
+        M500: Montserrat_500Medium,
+        M600: Montserrat_600SemiBold,
+        M700: Montserrat_700Bold,
+    });
+    
     const [selectedCardIndex, setSelectedCardIndex] = useState<number>()
 
     const updateSelectedCard = (newIndex: number) => {
