@@ -8,14 +8,14 @@ import SearchContainer from "../components/Home/SearchContainer"
 import SvgUri from "react-native-svg-uri"
 import CategorieCard from "../components/Home/CategorieCard/CategorieCard"
 import { Dimensions, ScrollView, View } from "react-native"
-import { FoodCardType } from '../types/Home/FoodCardTypes'
+import { CategorieCardType } from '../types/Home/CategorieCardTypes'
 import { foodInfo, updateSelected } from '../controllers/foodCtrl'
 
 const HomeScreen = () => {
 
-    const [cards, setCards] = React.useState<FoodCardType[]>(foodInfo)
+    const [cards, setCards] = React.useState<CategorieCardType[]>(foodInfo)
 
-    const updateCardSelected = (card: FoodCardType) => {
+    const updateCardSelected = (card: CategorieCardType) => {
         updateSelected(card, cards, setCards)
     }
 
@@ -38,7 +38,7 @@ const HomeScreen = () => {
             <View>
                 <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
                     {
-                        cards.map((card: FoodCardType)=>
+                        cards.map((card: CategorieCardType)=>
                             <CategorieCard card={card} onPress={updateCardSelected}/>
                         )
                     }

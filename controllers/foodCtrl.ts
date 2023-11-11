@@ -1,4 +1,4 @@
-import { FoodCardType } from "../types/Home/FoodCardTypes";
+import { FoodCardType } from "../types/Home/CategorieCardTypes";
 
 export const foodInfo: FoodCardType[] = [
     {id: 1, image: require('../assets/images/pizza.png'), title: 'Pizza', selected: false},
