@@ -2,9 +2,9 @@ import { FoodCardComponentProps } from '../../../types/Home/FoodCardTypes';
 import { Image } from "react-native";
 import StyledText from "../../general/StyledText";
 import SvgUri from "react-native-svg-uri";
-import { FoodCardButton, FoodCardStyles } from './FoodCardStyles';
+import { FoodCardButton, FoodCardStyles } from './CategorieCardStyles';
 
-const FoodCard = (props: FoodCardComponentProps) => {
+const CategorieCard = (props: FoodCardComponentProps) => {
 
     const { card, onPress } = props
 
@@ -24,4 +24,4 @@ const FoodCard = (props: FoodCardComponentProps) => {
     )
 }
 
-export default FoodCard
+export default CategorieCard
