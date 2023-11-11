@@ -12,6 +12,7 @@ const FoodCard = styled.View`
     align-items: center;
     overflow: hidden;
 `
+
 export const SideContainer = styled.View`
     justify-content: space-between;
 `
@@ -19,6 +20,12 @@ export const SideContainer = styled.View`
 export const InfoContainer = styled.View`
     margin-left: 20px;
     margin-top: 20px;
+`
+
+export const TitleContainer = styled.View`
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 `
 
 export const BottomContainer = styled.View`

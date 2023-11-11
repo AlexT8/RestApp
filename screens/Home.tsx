@@ -10,7 +10,7 @@ import CategorieCard from "../components/Home/CategorieCard/CategorieCard"
 import { Dimensions, Image, ScrollView, View } from "react-native"
 import { CategorieCardType } from '../types/Home/CategorieCardTypes'
 import { foodInfo, updateSelected } from '../controllers/foodCtrl'
-import FoodCard, { AddButton, BottomContainer, InfoContainer, SideContainer, StarContainer } from '../components/Home/FoodCard/FoodCard'
+import FoodCard, { AddButton, BottomContainer, InfoContainer, SideContainer, StarContainer, TitleContainer } from '../components/Home/FoodCard/FoodCard'
 import { constants } from '../utils/constants'
 
 const HomeScreen = () => {
@@ -52,7 +52,11 @@ const HomeScreen = () => {
             <FoodCard>
                 <SideContainer>
                     <InfoContainer>
-                        <StyledText style={{fontSize: 14, fontWeight: "600"}}>Top of the week</StyledText>
+                        <TitleContainer>
+                            <SvgUri source={require('../assets/images/crown_icon.svg')}/>
+
+                            <StyledText style={{fontSize: 14, fontWeight: "600", marginLeft: 8}}>Top of the week</StyledText>
+                        </TitleContainer>
                         <StyledText style={{fontSize: 16, fontWeight: "600", marginTop: 16}}>Primavera pizza</StyledText>
                         <StyledText style={{fontSize: 14, fontWeight: "500", color: constants.colors.gray, marginBottom: 10}}>Weight 540gr</StyledText>
 
