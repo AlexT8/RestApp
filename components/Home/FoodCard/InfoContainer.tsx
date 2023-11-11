@@ -7,7 +7,7 @@ const InfoContainerComponent = () => {
     return(
         <InfoContainer>
             <TitleContainer>
-                <SvgUri source={require('../../assets/images/crown_icon.svg')}/>
+                <SvgUri source={require('../../../assets/images/crown_icon.svg')}/>
 
                 <StyledText style={{fontSize: 14, fontWeight: "600", marginLeft: 8, color: constants.colors.black}}>Top of the week</StyledText>
             </TitleContainer>

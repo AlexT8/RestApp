@@ -1,4 +1,3 @@
-import SvgUri from "react-native-svg-uri"
 import FoodCard, { SideContainer } from "./FoodCardStyles"
 import { Image } from "react-native"
 import InfoContainerComponent from "./InfoContainer"
@@ -13,7 +12,7 @@ const FoodCardComponent = () => {
                 <BottomContainerComponent />
             </SideContainer>
 
-            <Image source={require('../../assets/images/pizza_image.png')} style={{overflow: 'hidden'}}/>
+            <Image source={require('../../../assets/images/pizza_image.png')} style={{overflow: 'hidden'}}/>
             
         </FoodCard>
     )
