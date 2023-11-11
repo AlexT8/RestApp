@@ -12,7 +12,7 @@ const CategoryCard = ({card, onPress}: CategoryCardComponentProps) => {
         <CategoryCardContainer onPress={onPress} selected={card.selected}>
             <Image source={card.image} style={{height: 60, width: 60}}/>
 
-            <StyledText size='14' font='M600'>{card.title}</StyledText>
+            <StyledText size='14px' font='M600'>{card.title}</StyledText>
 
             <CategoryCardButton selected={card.selected}>
                     <SvgUri source={card.selected ? selectedIcon : icon}/>

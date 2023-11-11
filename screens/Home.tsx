@@ -47,8 +47,8 @@ const HomeScreen = () => {
             <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{paddingBottom: 40}}>
                 <PaddingContainer>
                     <TitlesSection>
-                        <StyledText size='16' font='M400'>Food</StyledText>
-                        <StyledText size='32' font='M700'>Delivery</StyledText>
+                        <StyledText size='16px' font='M400'>Food</StyledText>
+                        <StyledText size='32px' font='M700'>Delivery</StyledText>
                     </TitlesSection>
 
                     <SearchContainer>
@@ -56,7 +56,7 @@ const HomeScreen = () => {
                         <SearchInput placeholder="Search..."/>
                     </SearchContainer>
 
-                    <StyledText size='16' font='M700'>Categories</StyledText>
+                    <StyledText size='16px' font='M700'>Categories</StyledText>
                 </PaddingContainer>
 
                 <View>
@@ -71,7 +71,7 @@ const HomeScreen = () => {
                 </View>
                 
                 <PaddingContainer>
-                    <StyledText size='16' font='M700' style={{marginTop: 16}}>Popular</StyledText>
+                    <StyledText size='16px' font='M700' style={{marginTop: 16}}>Popular</StyledText>
                     
                     {
                         pizzas.map(pizza => 

@@ -20,7 +20,7 @@ export const CategoryCardContainer = styled.TouchableOpacity<{selected: boolean}
 export const CategoryCardButton = styled.View<{selected: boolean}>`
     height: 26px;
     width: 26px;
-    border-radius: 100%;
+    border-radius: 100px;
     background: ${(props) =>
         props.selected ? constants.colors.background : constants.colors.secondary};
     align-items: center;

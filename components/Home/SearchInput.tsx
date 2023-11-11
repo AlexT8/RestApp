@@ -7,10 +7,10 @@ const SearchInput = styled.TextInput.attrs(props=>({
     }))`
     border-bottom-color: ${constants.colors.gray};
     border-bottom-width: 2;
-    font-size: 14;
-    padding-bottom: 4;
+    font-size: 14px;
+    padding-bottom: 4px;
     flex: 1;
-    margin-left: 8;
+    margin-left: 8px;
 `
 
 export default SearchInput

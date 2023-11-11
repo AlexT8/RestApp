@@ -5,7 +5,7 @@ const SearchContainer = styled.View`
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    padding-bottom: 25;
+    padding-bottom: 25px;
 `
 
 export default SearchContainer

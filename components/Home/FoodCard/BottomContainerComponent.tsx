@@ -11,7 +11,7 @@ const BottomContainerComponent = () => {
 
             <StarContainer>
                 <SvgUri source={require('../../../assets/images/star_icon.svg')}/>
-                <StyledText size='12' font='M500' style={{marginLeft: 4}}>5.0</StyledText>
+                <StyledText size='12px' font='M500' style={{marginLeft: 4}}>5.0</StyledText>
             </StarContainer>
         </BottomContainer>
     )
