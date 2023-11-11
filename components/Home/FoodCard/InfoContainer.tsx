@@ -9,10 +9,10 @@ const InfoContainerComponent = () => {
             <TitleContainer>
                 <SvgUri source={require('../../../assets/images/crown_icon.svg')}/>
 
-                <StyledText style={{fontSize: 14, fontWeight: "600", marginLeft: 8, color: constants.colors.black}}>Top of the week</StyledText>
+                <StyledText size='14' font='M600' style={{marginLeft: 8, color: constants.colors.black}}>Top of the week</StyledText>
             </TitleContainer>
-            <StyledText style={{fontSize: 14, fontWeight: "600", marginTop: 16, color: constants.colors.lightDark}}>Primavera pizza</StyledText>
-            <StyledText style={{fontSize: 14, fontWeight: "500", color: constants.colors.gray, marginBottom: 10}}>Weight 540gr</StyledText>
+            <StyledText size='14' font='M600' style={{marginTop: 16, color: constants.colors.lightDark}}>Primavera pizza</StyledText>
+            <StyledText size='12' font='M500' style={{color: constants.colors.gray, marginBottom: 10}}>Weight 540gr</StyledText>
 
         </InfoContainer>
     )
