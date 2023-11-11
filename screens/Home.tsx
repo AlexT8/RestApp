@@ -7,7 +7,7 @@ import SearchInput from "../components/Home/SearchInput"
 import SearchContainer from "../components/Home/SearchContainer"
 import SvgUri from "react-native-svg-uri"
 import CategoryCard from "../components/Home/CategoryCard/CategoryCard"
-import { ScrollView, View } from "react-native"
+import { ScrollView, Text, View } from "react-native"
 import { cards } from '../controllers/foodCtrl'
 import FoodCardComponent from '../components/Home/FoodCard/FoodCardComponent'
 import { useFonts, Montserrat_400Regular, Montserrat_500Medium, Montserrat_600SemiBold, Montserrat_700Bold } from '@expo-google-fonts/montserrat';
@@ -21,7 +21,7 @@ const pizzas = [
 
 const HomeScreen = () => {
 
-    useFonts({
+    const [fontsLoaded] = useFonts({
         M400: Montserrat_400Regular,
         M500: Montserrat_500Medium,
         M600: Montserrat_600SemiBold,
@@ -32,6 +32,10 @@ const HomeScreen = () => {
 
     const updateSelectedCard = (newIndex: number) => {
         setSelectedCardIndex(oldIndex => oldIndex !== newIndex ? newIndex : undefined)
+    }
+
+    if(!fontsLoaded){
+        return <Text>Loading...</Text>
     }
 
     return(
