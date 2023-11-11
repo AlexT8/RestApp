@@ -6,7 +6,7 @@ export const constants: ConstantsType = {
         text: '#313234',
         primary: '#F5CA48',
         secondary: '#F26C68',
-        lightText: '#CDCDCD',
+        gray: '#CDCDCD',
         price: '#E4723C'
     }
 }
