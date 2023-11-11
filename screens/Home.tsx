@@ -54,8 +54,8 @@ const HomeScreen = () => {
 
             <StyledText style={{fontSize: 16, fontWeight: "700"}}>Categories</StyledText>
 
-            <View style={{width: screenWidth, marginStart: -10}}>
-                <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{marginEnd: 10}}>
+            <View>
+                <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
                     {
                         cards.map((card: FoodCardType)=>
                             <FoodCard card={card} onPress={updateSelected}/>
