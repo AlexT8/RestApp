@@ -1,8 +1,8 @@
 import SvgUri from "react-native-svg-uri"
-import FoodCard, { SideContainer } from "./FoodCard"
+import FoodCard, { SideContainer } from "./FoodCardStyles"
 import { Image } from "react-native"
 import InfoContainerComponent from "./InfoContainer"
-import BottomContainerComponent from "./bottomContainerComponent"
+import BottomContainerComponent from "./BottomContainerComponent"
 
 const FoodCardComponent = () => {
     return(

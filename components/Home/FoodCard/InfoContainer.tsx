@@ -1,5 +1,5 @@
 import SvgUri from "react-native-svg-uri"
-import { InfoContainer, TitleContainer } from "./FoodCard"
+import { InfoContainer, TitleContainer } from "./FoodCardStyles"
 import StyledText from "../../general/StyledText"
 import { constants } from "../../../utils/constants"
 

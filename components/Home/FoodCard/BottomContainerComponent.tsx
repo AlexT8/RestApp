@@ -1,5 +1,5 @@
 import SvgUri from "react-native-svg-uri"
-import { AddButton, BottomContainer, StarContainer } from "./FoodCard"
+import { AddButton, BottomContainer, StarContainer } from "./FoodCardStyles"
 import StyledText from "../../general/StyledText"
 
 const BottomContainerComponent = () => {
