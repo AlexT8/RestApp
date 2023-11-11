@@ -7,6 +7,9 @@ interface ColorTypes {
     text: string,
     primary: string,
     secondary: string,
-    lightText: string,
-    price: string
+    gray: string,
+    price: string,
+    black: string,
+    lightDark: string,
+    white: string
 }
