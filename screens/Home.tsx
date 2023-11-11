@@ -7,7 +7,7 @@ import SearchInput from "../components/Home/SearchInput"
 import SearchContainer from "../components/Home/SearchContainer"
 import SvgUri from "react-native-svg-uri"
 import FoodCard from "../components/Home/FoodCard/FoodCard"
-import { Dimensions, ScrollView } from "react-native"
+import { Dimensions, ScrollView, View } from "react-native"
 import { FoodCardType } from '../types/Home/FoodCardTypes'
 
 const HomeScreen = () => {
@@ -54,13 +54,15 @@ const HomeScreen = () => {
 
             <StyledText style={{fontSize: 16, fontWeight: "700"}}>Categories</StyledText>
 
-            <ScrollView horizontal={true} style={{width: screenWidth, marginLeft: -18, paddingHorizontal: 10}}>
-                {
-                    cards.map((card: FoodCardType)=>
-                        <FoodCard card={card} onPress={updateSelected}/>
-                    )
-                }
-            </ScrollView>
+            <View style={{width: screenWidth, marginStart: -10}}>
+                <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{marginEnd: 10}}>
+                    {
+                        cards.map((card: FoodCardType)=>
+                            <FoodCard card={card} onPress={updateSelected}/>
+                        )
+                    }
+                </ScrollView>
+            </View>
         </ScreenContainer>
     )
 }
