@@ -33,3 +33,6 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
+# github readme images
+./git_images
