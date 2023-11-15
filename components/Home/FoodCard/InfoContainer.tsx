@@ -12,7 +12,7 @@ const InfoContainerComponent = () => {
         <StyledText
           size="14px"
           font="M600"
-          style={{ marginLeft: 8, color: constants.colors.black }}
+          style={{ marginLeft: 8, color: constants.colors.text }}
         >
           Top of the week
         </StyledText>

@@ -3,7 +3,7 @@ import { constants } from '../../../utils/constants'
 
 const FoodCard = styled.View`
   width: 100%;
-  background-color: #ffff;
+  background-color: ${constants.colors.white};
   height: 160px;
   border-radius: 25px;
   margin-top: 12px;

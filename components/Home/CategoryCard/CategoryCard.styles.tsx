@@ -5,7 +5,7 @@ export const CategoryCardContainer = styled.TouchableOpacity<{
   selected: boolean
 }>`
   background: ${(props) =>
-    props.selected ? constants.colors.primary : '#FFFF'};
+    props.selected ? constants.colors.primary : constants.colors.white};
   height: 180px;
   width: 120px;
   border-radius: 20px;
