@@ -19,8 +19,8 @@ export const constants: ConstantsType = {
     secondary: '#FF6961',
     gray: '#787878',            
     price: '#FFA07A',
-    black: '#000',
+    black: '#f2f2f2',
     lightDark: '#f2f2f2',
-    white: '#f2f2f2',
+    white: '#000',
   }
 }

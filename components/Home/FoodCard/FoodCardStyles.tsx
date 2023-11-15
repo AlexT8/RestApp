@@ -1,9 +1,8 @@
 import styled from 'styled-components/native'
-import { constants } from '../../../utils/constants'
 
 const FoodCard = styled.View`
   width: 100%;
-  background-color: ${constants.colors.white};
+  background-color: ${({theme})=>theme.white};
   height: 160px;
   border-radius: 25px;
   margin-top: 12px;
@@ -35,7 +34,7 @@ export const BottomContainer = styled.View`
 `
 
 export const AddButton = styled.TouchableOpacity`
-  background-color: ${constants.colors.primary};
+  background-color: ${({theme})=>theme.primary};
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   width: 100px;

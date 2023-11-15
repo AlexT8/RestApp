@@ -1,5 +1,4 @@
 import styled from 'styled-components/native'
-import { constants } from '../../utils/constants'
 import { TextProps } from 'react-native'
 
 interface StyledTextProps extends TextProps {
@@ -8,7 +7,7 @@ interface StyledTextProps extends TextProps {
 }
 
 const StyledText = styled.Text<StyledTextProps>`
-  color: ${constants.colors.text};
+  color: ${({theme})=>theme.text};
   font-family: ${(props: any) => props.font || 'M400'};
   font-size: ${(props: any) => props.size || 16};
 `

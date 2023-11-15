@@ -5,7 +5,7 @@ export const CategoryCardContainer = styled.TouchableOpacity<{
   selected: boolean
 }>`
   background: ${(props) =>
-    props.selected ? constants.colors.primary : constants.colors.white};
+    props.selected ? props.theme.primary : props.theme.white};
   height: 180px;
   width: 120px;
   border-radius: 20px;
@@ -24,7 +24,7 @@ export const CategoryCardButton = styled.View<{ selected: boolean }>`
   width: 26px;
   border-radius: 100px;
   background: ${(props) =>
-    props.selected ? constants.colors.background : constants.colors.secondary};
+    props.selected ? props.theme.background : props.theme.secondary};
   align-items: center;
   justify-content: center;
 `
