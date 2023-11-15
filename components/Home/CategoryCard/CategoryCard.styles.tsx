@@ -1,5 +1,4 @@
 import styled from 'styled-components/native'
-import { constants } from '../../../utils/constants'
 
 export const CategoryCardContainer = styled.TouchableOpacity<{
   selected: boolean
