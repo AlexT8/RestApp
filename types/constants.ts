@@ -1,5 +1,6 @@
 export interface ConstantsType {
   colors: ColorTypes
+  darkColors: ColorTypes
 }
 
 interface ColorTypes {

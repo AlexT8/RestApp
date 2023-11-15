@@ -10,6 +10,17 @@ export const constants: ConstantsType = {
     price: '#E4723C',
     black: '#000',
     lightDark: '#313234',
-    white: '#FFFFF',
+    white: '#FFFF',
   },
+  darkColors: {
+    background: '#121212',
+    text: '#f2f2f2',
+    primary: '#FFD700',
+    secondary: '#FF6961',
+    gray: '#787878',            
+    price: '#FFA07A',
+    black: '#000',
+    lightDark: '#f2f2f2',
+    white: '#f2f2f2',
+  }
 }
