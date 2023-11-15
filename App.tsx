@@ -4,7 +4,7 @@ import { darkTheme, lightTheme } from './styles/themes';
 
 export default function App() {
   return (
-    <ThemeProvider theme={false ? lightTheme : darkTheme}>
+    <ThemeProvider theme={true ? lightTheme : darkTheme}>
       <HomeScreen />
     </ThemeProvider>
   )
