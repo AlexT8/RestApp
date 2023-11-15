@@ -7,6 +7,7 @@ import {
   CategoryCardContainer,
 } from './CategoryCard.styles'
 import { useTheme } from 'styled-components'
+import { constants } from '../../../utils/constants'
 
 const icon = require('../../../assets/images/right_arrow.svg')
 const selectedIcon = require('../../../assets/images/right_arrow_selected.svg')
@@ -14,6 +15,8 @@ const selectedIcon = require('../../../assets/images/right_arrow_selected.svg')
 const CategoryCard = ({ card, onPress }: CategoryCardComponentProps) => {
 
   const theme = useTheme()
+
+  const isDarkTheme = theme.black === constants.darkColors.black
 
   return (
     <CategoryCardContainer onPress={onPress} selected={card.selected}>
@@ -24,7 +27,7 @@ const CategoryCard = ({ card, onPress }: CategoryCardComponentProps) => {
       </StyledText>
 
       <CategoryCardButton selected={card.selected}>
-        <SvgUri source={card.selected ? selectedIcon : icon} />
+        <SvgUri source={isDarkTheme ? icon : card.selected ? selectedIcon : icon} />
       </CategoryCardButton>
     </CategoryCardContainer>
   )
