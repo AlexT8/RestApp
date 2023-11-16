@@ -20,6 +20,7 @@ import {
   Montserrat_600SemiBold,
   Montserrat_700Bold,
 } from '@expo-google-fonts/montserrat'
+import { ThemeProps } from '../types/ThemeProps'
 
 const pizzas = [
   { id: 1, image: require('../assets/images/pizza_image.png') },
@@ -27,7 +28,7 @@ const pizzas = [
   { id: 3, image: require('../assets/images/pizza_image3.png') },
 ]
 
-const HomeScreen = () => {
+const HomeScreen = ({theme, setTheme}: ThemeProps) => {
   const [fontsLoaded] = useFonts({
     M400: Montserrat_400Regular,
     M500: Montserrat_500Medium,
@@ -50,7 +51,7 @@ const HomeScreen = () => {
   return (
     <ScreenContainer>
       <PaddingContainer>
-        <HomeHeader />
+        <HomeHeader theme={theme} setTheme={setTheme}/>
       </PaddingContainer>
 
       <ScrollView

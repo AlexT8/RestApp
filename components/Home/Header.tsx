@@ -1,6 +1,7 @@
-import { Image, TouchableOpacity } from 'react-native'
+import { Image, Switch, TouchableOpacity } from 'react-native'
 import SvgUri from 'react-native-svg-uri'
 import styled from 'styled-components/native'
+import { ThemeProps } from '../../types/ThemeProps'
 
 const Header = styled.View`
   flex-direction: row;
@@ -9,7 +10,7 @@ const Header = styled.View`
   width: 100%;
 `
 
-export const HomeHeader = () => {
+export const HomeHeader = ({theme, setTheme}: ThemeProps) => {
   return (
     <Header>
       <TouchableOpacity>
@@ -18,6 +19,8 @@ export const HomeHeader = () => {
           style={{ height: 40, width: 40, borderRadius: 100 }}
         />
       </TouchableOpacity>
+
+      <Switch value={theme === 'dark'} onChange={()=>setTheme(actualTheme => actualTheme === 'light' ? 'dark' : 'light')}/>
 
       <TouchableOpacity>
         <SvgUri
