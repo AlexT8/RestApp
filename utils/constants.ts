@@ -21,6 +21,6 @@ export const constants: ConstantsType = {
     price: '#FFA07A',
     black: '#f2f2f2',
     lightDark: '#f2f2f2',
-    white: '#000',
+    white: '#232323',
   }
 }
