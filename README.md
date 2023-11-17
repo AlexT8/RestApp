@@ -16,6 +16,5 @@ Down here are some photos and a video of the UI
 
 
 
-https://github.com/AlexT8/RestApp/assets/47864815/7ebc5a76-d87e-4401-a774-ae60749b774d
-
+https://github.com/AlexT8/RestApp/assets/47864815/09dd6bf9-2a6a-4360-9607-986af61190df
 
